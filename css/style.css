@@ -1,5 +1,5 @@
 body {
-	background-color: rgb(233, 224, 190);
+  background-color: rgb(233, 224, 190);
 }
 
 /* Layout */
@@ -7,6 +7,10 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   max-width: 1200px;
+}
+
+::selection {
+  background: transparent;
 }
 
 /* Typography */
@@ -52,7 +56,7 @@ textarea {
 }
 
 .checkers {
-	padding: 0;
+  padding: 0;
   position: absolute;
   margin: auto;
   width: 80vmin;
@@ -61,14 +65,17 @@ textarea {
   top: 0;
   right: 0;
   bottom: 0;
-  border: 30px solid #4D251D;
-  background: #F9EFA7;
+  border: 30px solid #4d251d;
+  background: #f9efa7;
+  font-size: 50px;
+  text-align: center;
+  z-index: 0;
 }
 
-.big-box{
-	position: absolute;
-	width: 50%;
-	height: 50%;
+.big-box {
+  position: absolute;
+  width: 50%;
+  height: 50%;
 }
 
 .box {
@@ -85,7 +92,8 @@ textarea {
 
 .box :first-child,
 .box :last-child {
-  background-color: #A35C56;
+  background-color: #a35c56;
+  z-index: 0;
 }
 
 .a {
@@ -106,4 +114,21 @@ textarea {
 .d {
   top: 50%;
   left: 50%;
+  z-index: 0;
 }
+
+.content {
+  position: absolute;
+  z-index: 2;
+}
+
+.content:hover {
+  box-shadow: 0 0 100px rgba(255, 255, 255, 1);
+cursor: pointer;
+	color: #fff;
+}
+
+.content:active {
+  color: crimson;
+  font-size: 70px;
+  }
